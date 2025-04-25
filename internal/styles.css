@@ -1,112 +1,197 @@
- * {
-      box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: sans-serif;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  .content {
-    flex: 1;
-    padding: 2em;
-  }
+.content {
+  flex: 1;
+  padding: 2em;
+}
 
-  footer { 
-      background-color: #444; 
-      color: white; 
-      padding: 1em; 
-      text-align: center; 
-  }
+footer { 
+  background-color: #444; 
+  color: white; 
+  padding: 1em; 
+  text-align: center; 
+}
 
-  header {
-    background-color: #444;
-    color: white;
-    padding: 1em;
-  }
-  
-  .header-container {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-  }
-  
-  .header-container img {
-    height: 60px;
-    width: auto;
-    border-radius: 5px;
-  }
-  
-  .header-text h1 {
-    margin: 0;
-    font-size: 1.8em;
-  }
-  
-  .header-text p {
-    margin: 0.2em 0 0 0;
-    font-style: italic;
-    font-size: 1em;
-  }
+header {
+  background-color: #444;
+  color: white;
+  padding: 1em;
+}
 
-  nav { 
-      background: #eee; 
-      padding: 1em; 
-      text-align: center; 
-  }
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 
-  nav a { 
-      margin: 0 15px;
-      text-decoration: none; 
-      color: #333; 
-      font-weight: bold; 
-  }
+.header-container img {
+  height: 60px;
+  width: auto;
+  border-radius: 5px;
+}
 
-  section { 
-      padding: 2em; 
-  }
+.header-text h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
 
-  img { 
-      max-width: 100%; 
-      border-radius: 8px; 
-  }
+.header-text p {
+  margin: 0.2em 0 0 0;
+  font-style: italic;
+  font-size: 1em;
+}
 
+nav { 
+  background: #eee; 
+  padding: 1em; 
+  text-align: center; 
+}
+
+nav a { 
+  margin: 0 15px;
+  text-decoration: none; 
+  color: #333; 
+  font-weight: bold; 
+}
+
+section { 
+  padding: 2em; 
+}
+
+img { 
+  max-width: 100%; 
+  border-radius: 8px; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card .label {
+  padding: 15px;
+}
+
+.batiment { background-color: #999; }
+.environnement { background-color: #2ecc71; }
+.art { background-color: #a29bfe; color: #2d3436; }
+.textile { background-color: #f1c40f; color: #2d3436; }
+.industrie { background-color: #95a5a6; }
+.esthetique { background-color: #ff6b6b; }
+.debouche { background-color: #e74c3c; }
+.autre { background-color: #76e4e0; color: #2d3436; }
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+      grid-template-columns: repeat(2, 1fr); /* Use 2 columns for tablets */
   }
+
+  .header-text h1 {
+      font-size: 1.5em; /* Smaller header text for better fit */
+  }
+
   .card {
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+      font-size: 1em; /* Smaller text size in cards */
   }
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+
+  nav {
+      padding: 0.5em; /* Less padding in navigation */
   }
-  .card .label {
-    padding: 15px;
+
+  nav a {
+      margin: 0 10px; /* Less space between links */
+      font-size: 1em; /* Smaller font size */
   }
-  .batiment { background-color: #999; }
-  .environnement { background-color: #2ecc71; }
-  .art { background-color: #a29bfe; color: #2d3436; }
-  .textile { background-color: #f1c40f; color: #2d3436; }
-  .industrie { background-color: #95a5a6; }
-  .esthetique { background-color: #ff6b6b; }
-  .debouche { background-color: #e74c3c; }
-  .autre { background-color: #76e4e0; color: #2d3436; }
+}
+
+@media (max-width: 768px) {
+  .grid {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+
+  .header-container {
+      flex-direction: column; /* Stack header content vertically */
+      align-items: center;
+  }
+
+  .header-text h1 {
+      font-size: 1.3em; /* Further reduce header text size */
+  }
+
+  .header-text p {
+      font-size: 0.9em; /* Smaller paragraph font size */
+  }
+
+  .card {
+      font-size: 0.9em; /* Smaller card text */
+  }
+
+  nav {
+      text-align: left; /* Align links to the left */
+  }
+
+  nav a {
+      font-size: 0.9em; /* Smaller font for links */
+  }
+
+  footer {
+      padding: 1em; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+      font-size: 1.1em; /* Adjust header for very small screens */
+  }
+
+  .header-text p {
+      font-size: 0.8em; /* Adjust paragraph font size */
+  }
+
+  .card {
+      font-size: 0.9em; /* Reduce card text size */
+  }
+
+  nav {
+      padding: 0.5em; /* Less padding for very small screens */
+  }
+
+  nav a {
+      margin: 0 8px; /* Tighter margin for links */
+  }
+}
