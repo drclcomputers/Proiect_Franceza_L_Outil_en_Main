@@ -1,0 +1,112 @@
+ * {
+      box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex: 1;
+    padding: 2em;
+  }
+
+  footer { 
+      background-color: #444; 
+      color: white; 
+      padding: 1em; 
+      text-align: center; 
+  }
+
+  header {
+    background-color: #444;
+    color: white;
+    padding: 1em;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .header-container img {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+  }
+  
+  .header-text h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+  
+  .header-text p {
+    margin: 0.2em 0 0 0;
+    font-style: italic;
+    font-size: 1em;
+  }
+
+  nav { 
+      background: #eee; 
+      padding: 1em; 
+      text-align: center; 
+  }
+
+  nav a { 
+      margin: 0 15px;
+      text-decoration: none; 
+      color: #333; 
+      font-weight: bold; 
+  }
+
+  section { 
+      padding: 2em; 
+  }
+
+  img { 
+      max-width: 100%; 
+      border-radius: 8px; 
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card .label {
+    padding: 15px;
+  }
+  .batiment { background-color: #999; }
+  .environnement { background-color: #2ecc71; }
+  .art { background-color: #a29bfe; color: #2d3436; }
+  .textile { background-color: #f1c40f; color: #2d3436; }
+  .industrie { background-color: #95a5a6; }
+  .esthetique { background-color: #ff6b6b; }
+  .debouche { background-color: #e74c3c; }
+  .autre { background-color: #76e4e0; color: #2d3436; }
