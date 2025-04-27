@@ -73,24 +73,30 @@ a:hover {
 }
 
 footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  padding: 1em; 
-  text-align: center; 
+	background-color: var(--footer-bg);
+	color: var(--footer-text);
+	padding: 1em;
+	text-align: center;
+	position: sticky;
+	bottom: 0;
+	width: 100%;
+	margin-top: auto;
 }
 
 .theme-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--header-bg);
-  color: var(--header-text);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: var(--header-bg);
+	color: var(--header-text);
+	border: none;
+	padding: 12px 24px;
+	border-radius: 25px;
+	cursor: pointer;
+	z-index: 1000;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	font-size: 1rem;
+	transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
@@ -206,6 +212,14 @@ video {
 }
 
 @media (max-width: 768px) {
+  .theme-toggle {
+	  padding: 15px 30px;
+	  font-size: 1.1rem;
+	  border-radius: 30px;
+	  bottom: 30px;
+	  right: 30px;
+  }
+
   nav {
     display: flex;
     flex-direction: column;
@@ -225,6 +239,16 @@ video {
 }
 
 @media (max-width: 480px) {
+  .theme-toggle {
+		padding: 18px 36px;
+		font-size: 1.2rem;
+		border-radius: 35px;
+		bottom: 40px;
+		right: 20px;
+		width: calc(100% - 40px);
+		max-width: 300px;
+  }
+  
   html {
     font-size: 18px;
   }
