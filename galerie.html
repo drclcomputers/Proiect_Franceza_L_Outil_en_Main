@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <title>Galerie - L’Outil en Main</title>
     <link rel="stylesheet" href="internal/styles.css">
-    <style>
-        img { width: 30%; margin: 1%; border-radius: 8px; }
-    </style>
+    <meta name="color-scheme" content="light dark">
+    <script src="internal/main.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="header-container">
-        <img src="src/logo.jpg" alt="Logo Outil en Main">
+        <a href="index.html"><img src="src/logo.jpg" alt="Logo Outil en Main"></a>
         <div class="header-text">
             <h1>Galerie de l’association</h1>
         </div>
@@ -58,6 +57,7 @@
 
     <footer>
         &copy; 2025 | Site réalisé par Dorneanu Denis
+        <button class="theme-toggle" onclick="toggleTheme()">Mode sombre</button>
     </footer>
 
 </body>

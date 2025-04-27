@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="internal/styles.css">
+    <meta name="color-scheme" content="light dark">
+    <script src="internal/main.js" defer></script>
     <title>Actions - L’Outil en Main</title>
 </head>
 <body>
 
     <header>
         <div class="header-container">
-        <img src="src/logo.jpg" alt="Logo Outil en Main">
+        <a href="index.html"><img src="src/logo.jpg" alt="Logo Outil en Main"></a>s
         <div class="header-text">
             <h1>Actions de l’association</h1>
         </div>
@@ -26,16 +28,16 @@
     </nav>
 
     <section class="content">
-    <!--<ul>
+    <h2>Actions</h2>
+    <ul>
         <li>Ateliers de menuiserie, couture, poterie</li>
         <li>Transmissions des savoir-faire traditionnels</li>
         <li>Événements et expositions locales</li>
         <li>Éducation pratique pour les jeunes</li>
     </ul>
-    <p><strong>Lieu :</strong> Plus de 200 ateliers dans toute la France</p>-->
-
-    <h2>Quels sont les métiers représentés dans les ateliers L'Outil en Main ?</h2>
     <strong>Lieu :</strong> Plus de 200 ateliers dans toute la France</p>
+
+    <h2>Mais, quels sont les métiers représentés dans les ateliers L'Outil en Main ?</h2>
     <div class="grid">
         <div class="card batiment">
           <img src="src/batiment.jpg" alt="Bâtiment">
@@ -75,6 +77,7 @@
 
     <footer>
         &copy; 2025 | Site réalisé par Dorneanu Denis
+        <button class="theme-toggle" onclick="toggleTheme()">Mode sombre</button>
     </footer>
 
 </body>

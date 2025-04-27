@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>À propos - L’Outil en Main</title>
     <link rel="stylesheet" href="internal/styles.css">
+    <meta name="color-scheme" content="light dark">
+    <script src="internal/main.js" defer></script>
 </head>
 <body>
         
     <header>
         <div class="header-container">
-        <img src="src/logo.jpg" alt="Logo Outil en Main">
+        <a href="index.html"><img src="src/logo.jpg" alt="Logo Outil en Main"></a>
         <div class="header-text">
             <h1>À propos du projet</h1>
         </div>
@@ -33,6 +35,12 @@
     <h2>Logo officiel de l’association</h2>
     <img src="src/logo_officiel.jpg" alt="Logo officiel" style="width:150px;">
 
+    <h2>Video: L'association l'Outil en Main ou la transmission de savoir-faire </h2>
+    <center><video width="480" height="360" controls>
+        <source src="src/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video></center>
+
     <h2>Contact</h2>
     <p><u>Adresse</u>: 63 rue Charles Auray</p>
     <p>93500 Pantin</p>
@@ -44,7 +52,6 @@
     <ul>
         <li><a href="https://www.loutilenmain.fr" target="_blank">Site officiel de L’Outil en Main</a></li>
         <li><a href="https://www.jeveuxaider.gouv.fr/reseaux/106-loutil-en-main" target="_blank">Rejoignez le mouvement L'Outil en Main</a>
-        <li><a href="https://www.youtube.com/watch?v=seJSY2tAPv4" target="_blank">L'association l'Outil en Main ou la transmission de savoir-faire</a>
         <li><a href="https://www.facebook.com/loutilenmainFR/?locale=fr_FR" target="_blank">Facebook</a>
     </ul>
 
@@ -52,6 +59,7 @@
 
     <footer>
         &copy; 2025 | Site réalisé par Dorneanu Denis
+        <button class="theme-toggle" onclick="toggleTheme()">Mode sombre</button>
     </footer>
 
 </body>
